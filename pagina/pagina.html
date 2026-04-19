@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Página</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Mi Página</h1>
+
+<img src="tecmilogo.jpg" width="200">
+
+<p>Nombre: HERNAN ENCINA</p>
+<p>Correo: AL07008702@tecmilenio.mx</p>
+
+<button onclick="mostrar()">Ver Matrícula</button>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span onclick="cerrar()" class="close">&times;</span>
+    <h2>Matrícula: AL07008702</h2>
+    <img src="foto.jpg" width="200">
+  </div>
+</div>
+
+<script>
+function mostrar() {
+  document.getElementById("modal").style.display = "block";
+}
+
+function cerrar() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Validating HTML exists..."
+      - test -f pagina/pagina.html || exit 1
+
+      - echo "Updating backup log..."
+      - echo "$(date) - pipeline executed" >> backup.log
+
+artifacts:
+  files:
+    - '**/*'
